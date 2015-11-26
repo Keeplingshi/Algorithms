@@ -2,6 +2,7 @@ package com.main;
 
 import org.junit.Test;
 
+import com.algorithm.BinarySearchST;
 import com.algorithm.SequentialSearchST;
 
 public class Main {
@@ -35,4 +36,53 @@ public class Main {
 		System.out.println("st³¤¶È£º"+st.size());
 	}
 
+	@Test
+	public void BinarySearchSTTest()
+	{
+		BinarySearchST<String,String> st=new BinarySearchST<String,String>(9000);
+		
+		System.out.println(st.size());
+		
+        // insert some key-value pairs
+        st.put("www.cs.princeton.edu",   "128.112.136.11");
+        st.put("www.cs.princeton.edu",   "128.112.136.35");
+        st.put("www.princeton.edu",      "128.112.130.211");
+        st.put("www.math.princeton.edu", "128.112.18.11");
+        st.put("www.yale.edu",           "130.132.51.8");
+        st.put("www.amazon.com",         "207.171.163.90");
+        st.put("www.simpsons.com",       "209.123.16.34");
+        st.put("www.stanford.edu",       "171.67.16.120");
+        st.put("www.google.com",         "64.233.161.99");
+        st.put("www.ibm.com",            "129.42.16.99");
+        st.put("www.apple.com",          "17.254.0.91");
+        st.put("www.slashdot.com",       "66.35.250.150");
+        st.put("www.whitehouse.gov",     "204.153.49.136");
+        st.put("www.espn.com",           "199.181.132.250");
+        st.put("www.snopes.com",         "66.165.133.65");
+        st.put("www.movies.com",         "199.181.132.250");
+        st.put("www.cnn.com",            "64.236.16.20");
+        st.put("www.iitb.ac.in",         "202.68.145.210");
+
+        // search for IP addresses given URL
+        System.out.println("size = " + st.size());
+        System.out.println(st.get("www.cs.princeton.edu"));
+        System.out.println(st.get("www.amazon.com"));
+        System.out.println(st.get("www.amazon.edu"));
+        System.out.println(st.get("www.yale.edu"));
+        System.out.println(st.toString());
+        System.out.println();
+        
+        st.delete("www.espn.com");
+        st.delete("www.amazon.com");
+        st.delete("www.aaaaaaaaa.com");
+        
+        System.out.println("size = " + st.size());
+        System.out.println(st.get("www.cs.princeton.edu"));
+        System.out.println(st.get("www.amazon.com"));
+        System.out.println(st.get("www.amazon.edu"));
+        System.out.println(st.get("www.yale.edu"));
+        System.out.println(st.toString());
+        System.out.println();
+        
+	}
 }

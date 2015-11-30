@@ -2,6 +2,7 @@ package com.main;
 
 import org.junit.Test;
 
+import com.algorithm.BST;
 import com.algorithm.BinarySearchST;
 import com.algorithm.SequentialSearchST;
 
@@ -84,5 +85,25 @@ public class Main {
         System.out.println(st.toString());
         System.out.println();
         
+	}
+	
+	@Test
+	public void BSTTest()
+	{
+		BST<String,Integer> bst=new BST<String, Integer>();
+		
+		bst.put("S", 5);
+		bst.put("B", 1);
+		bst.put("D", 2);
+		bst.put("A", 3);
+		bst.put("W", 6);
+		bst.put("X", 4);
+		
+		bst.print();
+		System.out.println(bst.get("D"));
+		bst.delete("D");
+		bst.print();
+		System.out.println("二叉树长度:"+bst.size());
+		
 	}
 }

@@ -28,12 +28,12 @@ public class Main {
 		
 		System.out.println(st.toString());
 		System.out.println("-----------------------");
-		System.out.println("stµÄXµÄvalue£º"+st.get("X"));
+		System.out.println("stä¸­Xçš„valueå€¼"+st.get("X"));
 		System.out.println("-----------------------");
 		st.delete("A");
 		System.out.println(st.toString());
 		System.out.println("-----------------------");
-		System.out.println("st³¤¶È£º"+st.size());
+		System.out.println("stçš„é•¿åº¦"+st.size());
 	}
 
 	@Test

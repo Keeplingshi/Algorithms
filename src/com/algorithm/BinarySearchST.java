@@ -1,5 +1,12 @@
 package com.algorithm;
 
+/**
+ * äºŒåˆ†æŸ¥æ‰¾ç®—æ³•  æœ‰åºæ•°ç»„çš„äºŒåˆ†æŸ¥æ‰¾
+ * @author Administrator
+ *
+ * @param <Key>
+ * @param <Value>
+ */
 public class BinarySearchST <Key extends Comparable<Key>, Value> {
 
     private Value[] values;      // symbol table values
@@ -16,7 +23,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
 	
     /**
-     * ·µ»ØBinarySearchST³¤¶È
+     * æ•°ç»„é•¿åº¦
      * @return
      */
     public int size()
@@ -25,7 +32,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
     
     /**
-     * ²éÕÒ
+     * æŸ¥æ‰¾
      * @param key
      * @return
      */
@@ -42,7 +49,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
     
     /**
-     * ¶ş·Ö²éÕÒ
+     * æŸ¥æ‰¾keyçš„ä½ç½®
      * @param key
      * @return
      */
@@ -66,7 +73,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
     
     /**
-     * ²åÈë
+     * æ’å…¥
      * @param key
      * @param value
      */
@@ -89,7 +96,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
     
     /**
-     * É¾³ı
+     * åˆ é™¤
      * @param key
      */
     public void delete(Key key)
@@ -108,11 +115,10 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
         	
         	N--;
     	}
-
     }
     
     /**
-     * ÊÇ·ñÎª¿Õ
+     * æ˜¯å¦ä¸ºç©º
      * @return
      */
     public boolean isEmpty() 
@@ -121,7 +127,7 @@ public class BinarySearchST <Key extends Comparable<Key>, Value> {
     }
     
     /**
-     * ´òÓ¡×Ö·û
+     * æ‰“å°æ•´ä¸ªäºŒåˆ†æŸ¥æ‰¾æ•°ç»„
      */
     @Override
     public String toString()

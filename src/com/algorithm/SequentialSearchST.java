@@ -1,8 +1,7 @@
 package com.algorithm;
 
 /**
- * ÎŞĞòÁ´±í
- * ÊµÏÖÁË²éÕÒ£¬²åÈë£¬É¾³ıµÈ¹¦ÄÜ
+ * åŸºäºæ— åºåˆ—è¡¨çš„é¡ºåºæŸ¥æ‰¾
  * @author chenbin
  *
  * @param <Key>
@@ -24,11 +23,11 @@ public class SequentialSearchST<Key ,Value> {
 		}
 	}
 	
-	private Node first;	//±íÍ·
-	private int N;		//Á´±í³¤¶È
+	private Node first;	//é“¾è¡¨é¦–ç»“ç‚¹
+	private int N;		//é“¾è¡¨é•¿åº¦
 	
 	/**
-	 * ²éÕÒ
+	 * è·å–keyé”®çš„å€¼
 	 * @param key
 	 * @return
 	 */
@@ -45,7 +44,7 @@ public class SequentialSearchST<Key ,Value> {
 	}
 	
 	/**
-	 * ²åÈë
+	 * æ’å…¥
 	 * @param key
 	 * @param value
 	 */
@@ -59,19 +58,17 @@ public class SequentialSearchST<Key ,Value> {
 		
 		for(Node x=first;x!=null;x=x.next)
 		{
-			//Èç¹û²éÕÒµ½¸Ã¼ü£¬Ôò¸üĞÂ
 			if(key.equals(x.key)){
 				x.value=value;
 				return;
 			}
 		}
-		//Î´ÃüÖĞ£¬ÔòÔÚÁ´±íÇ°¶Ë¼ÓÈë
 		first=new Node(key,value,first);
 		N++;
 	}
 	
 	/**
-	 * É¾³ı
+	 * åˆ é™¤
 	 * @param key
 	 */
 	public void delete(Key key)
@@ -98,7 +95,7 @@ public class SequentialSearchST<Key ,Value> {
 	}
 	
 	/**
-	 * ·µ»ØÁ´±í³¤¶È
+	 * é“¾è¡¨é•¿åº¦
 	 * @return
 	 */
 	public int size()
@@ -107,7 +104,7 @@ public class SequentialSearchST<Key ,Value> {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÁ´±íÊÇ·ñÎª¿Õ
+	 * æ˜¯å¦ä¸ºç©º
 	 * @return
 	 */
 	public boolean isEmpty()
@@ -116,7 +113,7 @@ public class SequentialSearchST<Key ,Value> {
 	}
 	
 	/**
-	 * Êä³ö¼üÖµ¶Ô
+	 * æ‰“å°æ•´ä¸ªé“¾è¡¨
 	 */
 	@Override
 	public String toString()
